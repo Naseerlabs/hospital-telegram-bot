@@ -230,7 +230,7 @@ export default async function handler(req, res) {
     // ----------------------------------------------
 
     const scheduleResult = await supabaseFetch(
-      `doctor_schedules?select=day_of_week,start_time,end_time,notes` +
+      'doctor_schedules?select=day_of_week,start_time,visit_type,notes' +
       `&doctor_id=eq.${doctor.id}` +
       `&order=id.asc`
     );
